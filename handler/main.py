@@ -7,7 +7,6 @@ origins = [
     "http://localhost",
     "http://localhost:8876",
     "http://localhost:8080",
-    "http://localhost:80",
 ]
 
 app.add_middleware(

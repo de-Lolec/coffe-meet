@@ -6,13 +6,11 @@ use App\Http\Requests\AuthLoginRequest;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Http;
 
 class LoginController
 {
     public function __invoke(AuthLoginRequest $request): JsonResponse
     {
-        dd(Http::get('http://localhost:5000/'));
         $request = $request->validated();
 
         $user = User::where('email', $request['email'])->first();
