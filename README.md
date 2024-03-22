@@ -1,36 +1,25 @@
-выполнить команды из корня проекта
+### Поднять и натсроить все окружение - ``make build``
+### Для ознакомление других комманд посмотрите в - ``makefile``
 
-``make build``
-``make back-build``
+___
 
-Для входа через браузер:
+### фронт - ``docker logs front``
+### перейти по network
 
-фронт - ``docker logs front``
-php - localhost:8876
-python - localhost:5000
+### бэк - ``172.16.0.2``
+### список ендпоинтов - ``make route-list``
 
-php:
-PYTHON_URL в env для обращение по апи
+### питон - ``172.16.0.4:5000``
 
-front:
-для запроса на php - localhost:8876/api/название запроса
-список запрос можно посмотреть командой ``make route-list``
+___
 
-для запроса на python - ``docker inspect python | grep "IPAddress"`` c 5000 портом
+#### php:
+- ###### laravel
 
-python:
-чтобы запросы шли с питоны на фронт надо добавить в cors адрес фронта(network) из ``docker logs front``
+#### front:
+- ###### react
+- ###### tailwind
+- ###### nextUi
 
-чтобы отправить запрос на php надо взять адрес из ``docker inspect nginx | grep "IPAddress"`` с 80 портом
-список запрос можно посмотреть командой ``make route-list``
-
-php:
-- laravel
-
-front:
-- react
-- tailwind
-- nextUi
-
-python:
-- fastApi
+#### python:
+- ###### fastApi
