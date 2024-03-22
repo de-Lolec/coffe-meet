@@ -1,5 +1,5 @@
 # команда для полного поднятия и настройки окружения
-build: up back-build back-setting
+build: up back-build
 
 # команда для поднятия окружения
 up:
@@ -16,9 +16,6 @@ clear-build:
 # команда для применения всех зависимостой внутри бэка
 back-build:
 	cd backend ; cp -n .env.example .env
-
-# установка зависимостей и настройка бэка
-back-setting:
 	docker exec -it app composer install
 	docker exec -it app php artisan key:generate
 	docker exec -it app php artisan migrate
