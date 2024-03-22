@@ -12,8 +12,7 @@ class LoginController
 {
     public function __invoke(AuthLoginRequest $request): JsonResponse
     {
-        $response = Http::get('http://localhost:8001/');
-        dd(Http::get('http://0.0.0.0:8001'));
+        dd(Http::get('http://localhost:5000/'));
         $request = $request->validated();
 
         $user = User::where('email', $request['email'])->first();

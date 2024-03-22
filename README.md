@@ -1,15 +1,10 @@
-docker-compose up -d
+выполнить команды из корня проекта
 
-copy file .env.example to .env in backend dir
+make build
+make back-build
 
-docker exec -it app bash
-
-* php artisan key:generate
-* php artisan migrate
-
+фронт находится по адресу network
 docker logs front
 
-get to network address
-
-на фронте tailwind + next ui
-
+php - localhost:8876
+python - localhost:5000

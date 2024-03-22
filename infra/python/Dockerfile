@@ -12,5 +12,5 @@ RUN python3 -m pip install fastapi uvicorn
 
 COPY . .
 
-EXPOSE 8001
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]
+EXPOSE 5000
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000", "--reload"]
