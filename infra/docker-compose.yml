@@ -39,7 +39,7 @@ services:
         volumes:
             - ../handler:/app
         ports:
-            - "0.0.0.0:5000:5000"
+            - "0.0.0.0:5005:5005"
         networks:
             appnet:
                 ipv4_address: 172.16.0.4
