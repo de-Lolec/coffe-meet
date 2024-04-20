@@ -1,9 +1,20 @@
 <script setup>
-import AppRegistration from "./components/AppRegistration/AppRegistration.vue";
+import { useRoute, useRouter } from "vue-router";
+import AppHeader from "./components/Header/AppHeader.vue";
+
+const route = useRoute();
+const router = useRouter();
+
+router.isReady().then(() => {
+	if (route.fullPath === "/") {
+		router.push("/registration");
+	}
+});
 </script>
 
 <template>
-	<AppRegistration />
+	<AppHeader />
+	<RouterView />
 </template>
 
 <style scoped></style>
